@@ -1,0 +1,13 @@
+FROM node:16
+
+WORKDIR /practico/mi-app-express
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
