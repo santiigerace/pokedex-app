@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo 'Running the application'
             
-                sh "cd mi-app-express && ls && pwd && docker-compose up"
+                sh "cd mi-app-express && ls && pwd && docker-compose version"
             }
         }
     }
