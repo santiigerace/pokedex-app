@@ -17,7 +17,8 @@ pipeline {
         stage('Run') {
             steps {
                 echo 'Running the application'
-                sh "docker-compose up"
+            
+                sh "cd mi-app-express && docker-compose up"
             }
         }
     }
