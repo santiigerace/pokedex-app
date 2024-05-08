@@ -5,20 +5,21 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the application'
+                sh 'docker build -t mi-app-express .'
             }
         }
         
         stage('Test') {
             steps {
                 echo 'Testing the application'
+                // Agrega comandos para ejecutar pruebas si es necesario
             }
         }
         
         stage('Run') {
             steps {
                 echo 'Running the application'
-            
-                sh "cd mi-app-express && ls && pwd && docker-compose up"
+                sh 'docker-compose up'
             }
         }
     }
@@ -29,3 +30,4 @@ pipeline {
         }
     }
 }
+
