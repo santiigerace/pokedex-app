@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo 'Running the application'
 
-                sh 'npm start'
+                sh "docker-compose up"
             }
         }
     }
