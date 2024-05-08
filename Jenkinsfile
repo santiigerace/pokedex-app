@@ -17,7 +17,7 @@ pipeline {
         stage('Run') {
             steps {
                 echo 'Running the application'
-                sh "/usr/local/bin/docker-compose up"
+                sh "chmod +x /usr/local/bin/docker-compose"
             }
         }
     }
